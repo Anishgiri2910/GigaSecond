@@ -1,0 +1,21 @@
+from datetime import datetime,date,time,timedelta
+def add_gigasecond(dt):
+	print (dt+timedelta(seconds=1000000000))
+
+if __name__ == '__main__':
+	year=int(raw_input())
+	month=int(raw_input())
+	day=int(raw_input())
+	d=date(year,month,day)
+	hour=int(raw_input())
+	if(hour=='null'):
+		hour=0
+	minute=int(raw_input())
+	if(minute=='null'):
+		minute=0
+	second=int(raw_input())
+	if(second=='null'):
+		second=0
+	t=time(hour,minute,second)
+	dt=datetime.combine(d,t)
+	add_gigasecond(dt)
